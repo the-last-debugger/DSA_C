@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -11,11 +12,17 @@
 *.ilk
 *.map
 *.exp
+=======
+# Compiled object files
+*.o
+*.obj
+>>>>>>> master
 
 # Precompiled Headers
 *.gch
 *.pch
 
+<<<<<<< HEAD
 # Libraries
 *.lib
 *.a
@@ -29,6 +36,18 @@
 *.dylib
 
 # Executables
+=======
+# Compiled Dynamic Libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static Libraries
+*.a
+*.lib
+
+# Executable files
+>>>>>>> master
 *.exe
 *.out
 *.app
@@ -42,6 +61,7 @@
 *.idb
 *.pdb
 
+<<<<<<< HEAD
 # Kernel Module Compile Results
 *.mod*
 *.cmd
@@ -53,3 +73,26 @@ dkms.conf
 
 # debug information files
 *.dwo
+=======
+# VS Code settings (optional)
+.vscode/
+
+# Build directories
+/build/
+bin/
+debug/
+release/
+
+# Temporary files
+*.log
+*.tmp
+*.cache
+*.swp
+*.bak
+*.stackdump
+
+# macOS / Windows specific
+.DS_Store
+Thumbs.db
+desktop.ini
+>>>>>>> master
