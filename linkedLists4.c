@@ -7,13 +7,17 @@ struct Node
     struct Node *next;
 };
 
-void printList(struct Node *head)
+void printlist(struct Node *head)
 {
     for (struct Node *current = head; current != NULL; current = current->next)
     {
         printf("%d -> ", current->data);
     }
-    printf("NULL\n");
+    printf("NULL");
+}
+
+void appendNode(struct Node *tail)
+{
 }
 
 int main()
@@ -23,7 +27,7 @@ int main()
     struct Node *third = malloc(sizeof(*third));
     if (first == NULL || second == NULL || third == NULL)
     {
-        perror("malloc failed!\n");
+        printf("malloc failed!");
         return 1;
     }
 
@@ -35,7 +39,7 @@ int main()
     second->next = third;
     third->next = NULL;
 
-    printList(first);
+    printlist(first);
 
     free(third);
     free(second);
