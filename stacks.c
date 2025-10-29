@@ -12,12 +12,13 @@ void push()
 
     if (top == N - 1)
 
-        printf("Overflow! Cannot push %d", &x);
+        printf("Overflow! Cannot push %d \n", x);
 
     else
     {
         top++;
         stack[top] = x;
+        printf("%d pushed successfully. \n", x);
     }
 }
 
@@ -26,10 +27,17 @@ int main()
     int choice;
     do
     {
-        printf("Enter choice: 1. Push: ");
+        printf("0. Exit \n");
+        printf("1. Push \n");
+
+        printf("Enter choice: ");
         scanf("%d", &choice);
         switch (choice)
         {
+        case 0:
+            printf("Exiting");
+            break;
+
         case 1:
             push();
             break;
