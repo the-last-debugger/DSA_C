@@ -15,7 +15,7 @@ void display()
     {
         printf("The items in the stack are :\n");
         for (i = top; i >= 0; i--)
-            printf(" %d\n", stack[i]);
+            printf("%d\n", stack[i]);
     }
 }
 void push()
