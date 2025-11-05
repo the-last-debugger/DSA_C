@@ -43,7 +43,7 @@ void pop()
     }
     else
     {
-        printf("popped element %d\n", stack[top]);
+        printf("popped item %d\n", stack[top]);
         top--;
     }
 }

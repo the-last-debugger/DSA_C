@@ -1,24 +1,58 @@
 #include <stdio.h>
+#define N 5
+int top = -1;
+int stack[N];
 
-#define N 5   // This is the maximum size of stack, no semicolon at the end
-int stack[N]; // The stack itself
-int top = -1; // points to the item on top. set to '-1' when stack is empty.
-
-void push()
+void display()
 {
-    int x;
-    printf("Enter Data: ");
-    scanf("%d", &x);
+
+    int i;
+    if (top == -1)
+    {
+        printf("The stack is empty\n");
+    }
+    else
+    {
+        printf("The items in the stack are :\n");
+        for (i = top; i >= 0; i--)
+            printf("%d\n", stack[i]);
+    }
+}
+void push(int x)
+{
 
     if (top == N - 1)
-
-        printf("Overflow! Cannot push %d \n", x);
-
+    {
+        printf("stack is full overflow\n");
+    }
     else
     {
         top++;
         stack[top] = x;
-        printf("%d pushed successfully. \n", x);
+        printf("%d has been pushed\n", x);
+    }
+}
+void pop()
+{
+    if (top == -1)
+    {
+        printf("stack underflow\n");
+    }
+    else
+    {
+        printf("popped item %d\n", stack[top]);
+        top--;
+    }
+}
+void peek()
+{
+    if (top == -1)
+    {
+        printf("Stack is empty\n");
+    }
+    else
+    {
+        printf("The element at the top is: %d\n", stack[top]);
     }
 }
 
@@ -27,24 +61,28 @@ int main()
     int choice;
     do
     {
-        printf("0. Exit \n");
-        printf("1. Push \n");
-
-        printf("Enter choice: ");
+        printf("1.push\n2.pop\n3.peek\n4.display\n5.exit\n");
+        printf("enter your choice: \n");
         scanf("%d", &choice);
         switch (choice)
         {
-        case 0:
-            printf("Exiting");
-            break;
-
         case 1:
-            push();
+            push(30);
             break;
-
+        case 2:
+            pop();
+            break;
+        case 3:
+            peek();
+            break;
+        case 4:
+            display();
+            break;
+        case 5:
+            return 0;
         default:
             printf("invalid choice");
         }
-    } while (choice != 0);
+    } while (choice != 5);
     return 0;
 }
