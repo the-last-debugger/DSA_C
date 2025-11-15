@@ -40,7 +40,8 @@ void pop()
     }
     else
     {
-        printf("popped item %d\n", stack[top]);
+        int x =
+            printf("popped item %d\n", stack[top]);
         top--;
     }
 }
