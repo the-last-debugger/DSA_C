@@ -11,11 +11,6 @@ int main()
 {
     struct Node *first = malloc(sizeof(*first));
     struct Node *second = malloc(sizeof(*second));
-    if (first == NULL || second == NULL)
-    {
-        perror("malloc failed!");
-        return 1;
-    };
 
     first->data = 10;
     second->data = 20;
